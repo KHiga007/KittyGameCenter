@@ -24,13 +24,3 @@ La aplicación usa C#, WinForms y WebView2 con una estructura MVC.
 | [Views](KittyGameCenter/Views) | Ventana de Windows e interfaz en HTML, CSS y JavaScript |
 | [Controllers](KittyGameCenter/Controllers) | Acciones de la biblioteca y comunicación con la interfaz |
 | [Services](KittyGameCenter/Services) | Detección de juegos, caché de imágenes y migración de datos |
-
-## Publicar
-
-Desde la raíz del repositorio, ejecutá:
-
-```powershell
-dotnet publish KittyGameCenter/KittyGameCenter.csproj -c Release -o app
-```
-
-La salida queda en `app/`, con `KittyGameCenter.exe` y sus archivos de ejecución.
