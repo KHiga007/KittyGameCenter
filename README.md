@@ -14,17 +14,6 @@ KittyGameCenter es una aplicación de escritorio para Windows que reúne tus jue
 
 Descargá el ZIP para Windows desde [Releases](https://github.com/KHiga007/KittyGameCenter/releases/latest), extraelo y ejecutá KittyGameCenter.exe. Necesitás .NET Desktop Runtime 10 y Microsoft Edge WebView2 Runtime.
 
-## Abrir en Visual Studio
-
-Necesitás Windows, el SDK de .NET 10, Microsoft Edge WebView2 Runtime y una versión de Visual Studio compatible con .NET 10 con la carga de trabajo **Desarrollo de escritorio de .NET**.
-
-```powershell
-git clone https://github.com/KHiga007/KittyGameCenter.git
-cd KittyGameCenter
-```
-
-Abrí [KittyGameCenter.sln](KittyGameCenter.sln) y presioná **F5**. Visual Studio restaura las dependencias de NuGet y genera el ejecutable en `KittyGameCenter/bin`.
-
 ## Estructura del proyecto
 
 La aplicación usa C#, WinForms y WebView2 con una estructura MVC.
