@@ -10,6 +10,10 @@ KittyGameCenter es una aplicación de escritorio para Windows que reúne tus jue
 - Permite ordenar por nombre, filtrar o agrupar por plataforma y elegir entre tres tamaños de tarjeta.
 - Guarda la biblioteca y la configuración en `%LOCALAPPDATA%\AkiNekoApps\KittyGameCenter`.
 
+## Descargar y ejecutar
+
+Descargá el ZIP para Windows desde [Releases](https://github.com/KHiga007/KittyGameCenter/releases/latest), extraelo y ejecutá KittyGameCenter.exe. Necesitás .NET Desktop Runtime 10 y Microsoft Edge WebView2 Runtime.
+
 ## Abrir en Visual Studio
 
 Necesitás Windows, el SDK de .NET 10, Microsoft Edge WebView2 Runtime y una versión de Visual Studio compatible con .NET 10 con la carga de trabajo **Desarrollo de escritorio de .NET**.
@@ -19,7 +23,7 @@ git clone https://github.com/KHiga007/KittyGameCenter.git
 cd KittyGameCenter
 ```
 
-Abrí [KittyGameCenter.sln](KittyGameCenter.sln) y presioná **F5**. Visual Studio restaura las dependencias de NuGet y genera el ejecutable en `src/bin`.
+Abrí [KittyGameCenter.sln](KittyGameCenter.sln) y presioná **F5**. Visual Studio restaura las dependencias de NuGet y genera el ejecutable en `KittyGameCenter/bin`.
 
 ## Estructura del proyecto
 
@@ -27,17 +31,17 @@ La aplicación usa C#, WinForms y WebView2 con una estructura MVC.
 
 | Carpeta | Contenido |
 | --- | --- |
-| [Models](src/Models) | Juegos, resultados de escaneo y datos persistidos |
-| [Views](src/Views) | Ventana de Windows e interfaz en HTML, CSS y JavaScript |
-| [Controllers](src/Controllers) | Acciones de la biblioteca y comunicación con la interfaz |
-| [Services](src/Services) | Detección de juegos, caché de imágenes y migración de datos |
+| [Models](KittyGameCenter/Models) | Juegos, resultados de escaneo y datos persistidos |
+| [Views](KittyGameCenter/Views) | Ventana de Windows e interfaz en HTML, CSS y JavaScript |
+| [Controllers](KittyGameCenter/Controllers) | Acciones de la biblioteca y comunicación con la interfaz |
+| [Services](KittyGameCenter/Services) | Detección de juegos, caché de imágenes y migración de datos |
 
 ## Publicar
 
 Desde la raíz del repositorio, ejecutá:
 
 ```powershell
-dotnet publish src/KittyGameCenter.csproj -c Release -p:PublishProfile=FolderProfile
+dotnet publish KittyGameCenter/KittyGameCenter.csproj -c Release -o app
 ```
 
-También podés seleccionar **FolderProfile** desde **Publicar** en Visual Studio. La salida queda en `app/`, con `KittyGameCenter.exe` y sus archivos de ejecución.
+La salida queda en `app/`, con `KittyGameCenter.exe` y sus archivos de ejecución.
